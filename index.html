@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="flex">
+        <p>Michael Adigun</p>
+        <ul class="flex">
+            <li><href to="#">Home</href> </li>
+            <li><href to="#">About</href></li>
+            <li><href to="#">Portfolio</href></li>
+            <li><href to="#">contact me</href></li>
+        </ul>
+    </header>
+
+    <section id="first">
+        <p>HI THERE,    I'M</p>
+        <h2>Michael<br/>Adigun</h2>
+       
+        <p>FRONTEND DEVELOPER</p>
+        <P>
+            I'm a freelance FrontEnd Developer based in Lagos,<br/>
+            Excited to create solution to complex challenges.
+        </P>
+        <a href="#fourth"> <button>Hire Me</button><a href="#fourth"></a>
+    </section>
+
+    <section id="second" class="flex">
+        
+        <div>
+            <h4>Who I Am?</h4>
+            <h3>About Me</h3>
+        <p>
+            Enthusiastic web developer with in-depth knowledge and skill in
+            Java Script, React and proficient use of Git. I have demonstrated good use of my
+            skill by developing pixel perfection UIs, Integration
+            of third party APIs and build responsive web apps.
+        </p>
+        <p> 
+            I love problem solving and standing 
+            up to challenging task to create a solution. I have worked 
+            on several projects this includes, landing pages, weather 
+            app, To do List, a chess plugin and many more.
+        </p>
+        <p>
+            I am well convinent to take up individual task as well as collaborate with teams to build a solution.
+            I'm given to producing the best result on any project I work on.
+        </p> 
+        
+        <a href="./assets/Web Developer CV.pdf" download="resume.pdf"
+         ><button >Download CV</button></a>
+        </div>
+
+        <img src="./images/20210731_160918 (2).jpg" alt="loading..."/>
+    </section>
+
+    <section id="third">
+        <h2>Portfolio</h2>
+        <div class="grid">
+            <div class="weather">
+                <img src="./images/Weather Logo.png" alt=""> <br>
+                <a href="https://michael-2509.github.io/weather-APP/">Weather App</a>
+            </div>
+    
+            <div>
+                <img src="./images/quiz logo.jpg" alt=""> <br>
+                <a href="https://michael-2509.github.io/quiz-app/"> Quiz App</a>
+            </div>
+    
+            <div>
+                <img src="./images/image-intro-mobile.jpg" alt=""> <br>
+                <a href="https://michael-2509.github.io/insure-landing-page/">insure landing page</a>
+            </div>
+    
+            <div>
+               <img src="./images/e-commerce logo.jpg" alt=""> <br>
+               <a href="https://michael-2509.github.io/room-homepage-master/">e-commerce landing page</a>
+            </div>
+    
+           <div>
+              <img src="./images/sign up logoo.jpg" alt=""> <br>
+              <a href="https://michael-2509.github.io/intro-component-with-signup-form-master/">Sign up page</a>
+           </div>
+    
+           <div>
+              <img src="./images/Tech logo.png" alt=""> <br>
+              <a href="https://michael-2509.github.io/four-card-feature-section-master/">card page</a>
+           </div>
+        </div>
+    </section>
+
+    <section id="fourth">
+        <h2>Contact me</h2>
+        <form ref={form} class="contact-form">
+            <div className="contact-text">
+                <h1>Let's get in touch</h1>
+                <p>i'm available to work on new projects</p>
+            </div>
+
+            <input
+            type="text"
+            id="name" 
+            placeholder="Your Name"
+            name="user_name"
+            />
+
+           <input
+           type="text"
+           id="email" 
+           placeholder="email address"
+           name="user_address"
+           /> <br />
+
+           <textarea
+           type="text"
+           id="message" 
+           placeholder="write your message here"
+           name="message"
+           > </textarea><br />
+
+           <button onClick={sendMessage}>Submit</button>    
+        </form>
+     </div>
+    </section>
+    <Script src="script.js"></Script>
+</body>
+</html>

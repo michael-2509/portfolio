@@ -1,0 +1,198 @@
+body {
+  background-color: #222020;
+  color: white;
+  margin: 0 10rem;
+}
+
+/* img {
+  background-color: aliceblue;
+} */
+
+button {
+  padding: 15px 2px;
+  width: 150px;
+  background: #1e491e;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 20px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 80%;
+}
+
+header ul {
+  list-style-type: none;
+  gap: 25px;
+}
+
+/*section one*/
+#first {
+  margin-top: 15rem;
+  margin-bottom: 6rem;
+}
+
+#first h2 {
+  font-size: 4rem;
+}
+
+#first p:nth-of-type(2n) {
+  color: rgb(40, 163, 40);
+}
+
+#first p:nth-of-type(3n) {
+  line-height: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+/* section two */
+#second {
+  /* background-color: #292626; */
+  font-size: 1.4rem;
+  margin: 0;
+  gap: 40px;
+  align-items: center;
+}
+
+#second img {
+  width: 250px;
+  flex: 50%;
+}
+
+#second div {
+  flex: 50%;
+}
+
+#second h4 {
+  color: #1e491e;
+  border-right: 1px 3px #1e491e;
+}
+
+#second button {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+#third {
+  margin-bottom: 50px;
+}
+
+#third .grid {
+  color: white;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33%;
+  justify-items: center;
+  row-gap: 100px;
+}
+
+@media screen and (max-width: 500px) {
+  #third .grid {
+    display: block;
+    padding-bottom: 2rem;
+    padding-left: 2.5rem;
+  }
+
+  #third div {
+    margin-bottom: 1rem;
+  }
+}
+
+#third .grid img {
+  width: 250px;
+  height: 250px;
+}
+
+@media screen and (max-width: 375px) {
+  #third h2 {
+    width: 100px;
+  }
+
+  #third .grid {
+    padding-left: 1.5rem;
+  }
+  #third .grid img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+#third .grid a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+#fourth {
+  margin-bottom: 200px;
+}
+
+#fourth .contact-form {
+  /* background-color: #b8bacf26; */
+  margin-top: 1rem;
+}
+
+#fourth .contact-text {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+#fourth .contact-form input,
+#message {
+  background-color: white;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 3rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 11px 20px;
+  width: 40%;
+  outline: none;
+}
+
+#fourth .contact-form #message {
+  margin-bottom: 2rem;
+  height: 120px;
+  width: 90%;
+}
+
+#fourth .contact-form button {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  margin-left: 65rem;
+  width: 100px;
+}
+
+/* tablet responsiveness */
+@media screen and (max-width: 1023px) {
+  #fourth .contact-form button {
+    position: absolute;
+    right: 5rem;
+    margin-top: -55px;
+  }
+}
+
+/* phone responseviness */
+@media screen and (max-width: 768px) {
+  #fourth .contact-bkg {
+    width: 100%;
+  }
+  #fourth .contact-form input {
+    width: 80%;
+  }
+
+  #fourth .contact-form button {
+    position: absolute;
+    right: 3rem;
+    margin-top: -55px;
+  }
+}
