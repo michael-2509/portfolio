@@ -21,9 +21,3 @@ download(
   "https://res.cloudinary.com/michael-2509/image/upload/v1650644652/Web_Developer_CV_wkvea8.pdf",
   "resume.pdf"
 );
-
-// const downloadButton = document.querySelector(btn_download);
-
-// downloadButton.addEventListener(click, function () {
-//   console.log("working");
-// });

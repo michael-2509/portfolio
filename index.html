@@ -6,31 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael</title>
     <link rel="stylesheet" href="main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
 </head>
 <body>
     <header class="flex">
         <p>Michael Adigun</p>
         <ul class="flex">
-            <li><href to="#">Home</href> </li>
-            <li><href to="#">About</href></li>
-            <li><href to="#">Portfolio</href></li>
-            <li><href to="#">contact me</href></li>
+            <li class="home"><a href="#first">Home</a> </li>
+            <li class="about"><a href="#second">About</a></li>
+            <li class="porfolio"><a href="#third">Portfolio</a></li>
+            <li class="contact"><a href="#fourth">contact me</a></li>
         </ul>
     </header>
 
     <section id="first">
-        <p>HI THERE,    I'M</p>
-        <h2>Michael<br/>Adigun</h2>
+        <h1>Hi There, I'm</h1>
+        <h2>Michael<br/>Adigun.</h2>
        
         <p>FRONTEND DEVELOPER</p>
         <P>
             I'm a freelance FrontEnd Developer based in Lagos,<br/>
             Excited to create solution to complex challenges.
         </P>
-        <a href="#fourth"> <button>Hire Me</button><a href="#fourth"></a>
+        <a href="#fourth"> <button>Hire Me</button></a>
     </section>
 
-    <section id="second" class="flex">
+    <section id="second" class="flex" data-aos="fade-up" data-aos-duration="2000">
         
         <div>
             <h4>Who I Am?</h4>
@@ -39,15 +41,15 @@
             Enthusiastic web developer with in-depth knowledge and skill in
             Java Script, React and proficient use of Git. I have demonstrated good use of my
             skill by developing pixel perfection UIs, Integration
-            of third party APIs and build responsive web apps.
+            of third party APIs and building responsive web apps.
         </p>
         <p> 
             I love problem solving and standing 
             up to challenging task to create a solution. I have worked 
-            on several projects this includes, landing pages, weather 
+            on several projects these includes, landing pages, weather 
             app, To do List, a chess plugin and many more.
         </p>
-        <p>
+         <p>
             I am well convinent to take up individual task as well as collaborate with teams to build a solution.
             I'm given to producing the best result on any project I work on.
         </p> 
@@ -56,41 +58,75 @@
          ><button >Download CV</button></a>
         </div>
 
-        <img src="./images/20210731_160918 (2).jpg" alt="loading..."/>
+        <img src="./images/michael.jpeg" alt="loading..."/>
     </section>
 
-    <section id="third">
+    <section id="third" data-aos="zoom-in-down" data-aos-duration="1000">
         <h2>Portfolio</h2>
         <div class="grid">
-            <div class="weather">
+            <div class="wrapper">
                 <img src="./images/Weather Logo.png" alt=""> <br>
-                <a href="https://michael-2509.github.io/weather-APP/">Weather App</a>
+                <button class="project-btn">  <a href="https://michael-2509.github.io/weather-APP/">Weather App</a></button>
+                <div class="overlay">
+                    <p>This is a weather app with basic functionality,
+                        useful for getting update on current weather 
+                        conditions
+                    </p>
+                    <p>JavaScript API</p>
+                </div>
             </div>
     
-            <div>
+            <div class="wrapper">
                 <img src="./images/quiz logo.jpg" alt=""> <br>
-                <a href="https://michael-2509.github.io/quiz-app/"> Quiz App</a>
+               <button class="project-btn"><a href="https://michael-2509.github.io/quiz-app/"> Quiz App</a></button> 
+                <div class="overlay">
+                    <p>This  is a quiz application with basic functionality that randomly 
+                        generate question and allows user select from the available options
+                    </p>
+                    <p>JavaScript </p>
+                </div>
             </div>
     
-            <div>
+            <div class="wrapper">
                 <img src="./images/image-intro-mobile.jpg" alt=""> <br>
-                <a href="https://michael-2509.github.io/insure-landing-page/">insure landing page</a>
+                <button class="project-btn"> <a href="https://michael-2509.github.io/insure-landing-page/">insure landing page</a></button>
+                <div class="overlay">
+                    <p>An insurance landing page with a very beautiful user expererience
+                    </p>
+                    <p>HTML CSS</p>
+                </div>
             </div>
     
-            <div>
+            <div class="wrapper">
                <img src="./images/e-commerce logo.jpg" alt=""> <br>
-               <a href="https://michael-2509.github.io/room-homepage-master/">e-commerce landing page</a>
+               <button class="project-btn"><a href="https://michael-2509.github.io/room-homepage-master/">e-commerce landing page</a></button>
+               <div class="overlay">
+                <p>Room is website that allow's you check out your preferred furniture and shop for favourite
+                </p>
+                <p>HTML CSS JavaScript</p>
+            </div>
             </div>
     
-           <div>
+           <div class="wrapper">
               <img src="./images/sign up logoo.jpg" alt=""> <br>
-              <a href="https://michael-2509.github.io/intro-component-with-signup-form-master/">Sign up page</a>
+              <button class="project-btn"><a href="https://michael-2509.github.io/intro-component-with-signup-form-master/">Sign up page</a></button> 
+              <div class="overlay">
+                <p>This is a basic sign up form with validation.
+                </p>
+                <p>HTML CSS JavaScript</p>
+            </div>
            </div>
     
-           <div>
+           <div class="wrapper">
               <img src="./images/Tech logo.png" alt=""> <br>
-              <a href="https://michael-2509.github.io/four-card-feature-section-master/">card page</a>
+              <button class="project-btn"> <a href="https://michael-2509.github.io/four-card-feature-section-master/">card page</a></button>
+              <div class="overlay">
+                <p>A well implemented card UI testing card layout imlementation
+                </p>
+                <p>HTML CSS JavaScript</p>
+            </div>
            </div>
+           
         </div>
     </section>
 
@@ -99,7 +135,7 @@
         <form ref={form} class="contact-form">
             <div className="contact-text">
                 <h1>Let's get in touch</h1>
-                <p>i'm available to work on new projects</p>
+                <p>I'm available to work on new projects</p>
             </div>
 
             <input
@@ -123,10 +159,19 @@
            name="message"
            > </textarea><br />
 
-           <button onClick={sendMessage}>Submit</button>    
+           
         </form>
+        <a href="mailto:idowumichael2509@gmail.com"><button onClick={sendMessage}>Get in Touch</button></a>
      </div>
     </section>
+    <!-- <footer>
+        <a href="mailto:idowumichael2509@gmail.com">GITHUB</a>
+        <a href="mailto:idowumichael2509@gmail.com">TWITTER</a>
+    </footer> -->
     <Script src="script.js"></Script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>

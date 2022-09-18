@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Open+Sans:wght@400;500;700&family=Roboto+Mono:wght@300;400;500&display=swap');
+*{
+  box-sizing: border-box;
+}
 body {
-  background-color: #222020;
+  background-color: rgb(27, 27, 47);
   color: white;
+  font-family: 'inter';
+
+}
+
+section {
   margin: 0 10rem;
+  padding-top: 80px;
 }
 
 @media screen  and (max-width:500px) {
@@ -9,21 +19,28 @@ body {
     margin:0px;
     padding:1rem;
   }
-  
+
+  section {
+    margin: 0 1rem;
+  }
 }
 
-/* img {
-  background-color: aliceblue;
-} */
+a {color:white;text-decoration: none;}
 
 button {
+  background-color: rgb(27, 27, 47);
+  border:2px solid #64ffda;
+  font-family: "roboto mono";
   padding: 15px 2px;
   width: 150px;
-  background: #1e491e;
   cursor: pointer;
-  color: white;
-  border: none;
+  color: #64ffda;
   border-radius: 20px;
+}
+
+button:hover {
+  background-color: #64ffda;
+  color: rgb(27, 27, 47);
 }
 
 .flex {
@@ -34,33 +51,110 @@ button {
 header {
   position: fixed;
   top: 0;
-  width: 80%;
+  background-color: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px -10px rgb(25, 25, 35);
+  padding: 5px 15px;
+  width: 97%;
+  z-index: 11;
 }
 
 header ul {
+  cursor: pointer;
+  font-family: "roboto mono";
   list-style-type: none;
   gap: 25px;
+ 
 }
+
+header ul li a:hover {
+  border: 2px solid #64ffda;
+  background-color: #64ffda;
+  color: rgb(27, 27, 47);
+  padding: 10px;
+}
+
+.home{
+  animation-name: bounceInDown;
+  animation-duration: 1s;
+} .about{
+  animation-name: bounceInDown;
+  animation-duration: 2s;
+}.porfolio{
+  animation-name: bounceInDown;
+  animation-duration: 3s;
+} 
+.contact{
+  animation-name: bounceInDown;
+  animation-duration: 4s;
+}
+
+@keyframes bounceInDown {
+  0% {
+     opacity: 0;
+     transform: translateY(-2000px);
+  }
+  60% {
+     opacity: 1;
+     transform: translateY(30px);
+  }
+  80% {
+     transform: translateY(-10px);
+  }
+  100% {
+     transform: translateY(0);
+  }
+} 
 
 /*section one*/
 #first {
-  margin-top: 15rem;
+  margin-top: 8rem;
   margin-bottom: 6rem;
+  /* animation-name: fadeup;
+  animation-duration:3s; */
+}
+
+@keyframes fadeup{
+  0% {opacity: 0; transform: translateY(100px);}
+  /* 20% {opacity: 0.2; transform:translateY(-40px)} */
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+#first > h1 {
+  color: #64ffda;
+  font-family: 'Roboto mono';
+  font-size: 16px;
+  animation-name: fadeup;
+  animation-duration:2s;
 }
 
 #first h2 {
-  font-size: 4rem;
+  font-size: 4.5rem;
+  animation-name: fadeup;
+  animation-duration:3s;
 }
 
-#first p:nth-of-type(2n) {
-  color: rgb(40, 163, 40);
+#first p:first-of-type {
+  color: #64ffda;
+  animation-name: fadeup;
+  animation-duration:4s;
 }
 
-#first p:nth-of-type(3n) {
-  line-height: 20px;
+#first p:last-of-type {
+  line-height: 26px;
   letter-spacing: 1px;
   margin-bottom: 40px;
+  animation-name: fadeup;
+  animation-duration:4s;
 }
+
+#first button {
+  animation-name: fadeup;
+  animation-duration:5s;
+
+}
+
+
 
 @media screen and (max-width:500px) {
   
@@ -70,14 +164,13 @@ header ul {
 #second {
   /* background-color: #292626; */
   font-size: 1.4rem;
-  margin: 0;
   gap: 40px;
   align-items: center;
 }
 
 #second img {
-  width: 250px;
-  flex: 50%;
+  width: 30%;
+  flex: 30%;
 }
 
 #second div {
@@ -85,8 +178,14 @@ header ul {
 }
 
 #second h4 {
-  color: #1e491e;
+  color:#64ffda;
   border-right: 1px 3px #1e491e;
+}
+
+#second p {
+  color: #8892B0;
+  font-size: 18px;
+  line-height: 32px;
 }
 
 #second button {
@@ -97,6 +196,7 @@ header ul {
 @media screen and (max-width:500px) {
   #second {
     flex-direction: column-reverse;
+    margin: 0 1rem;
   }
 
   #second img{
@@ -113,19 +213,24 @@ header ul {
   color: white;
   display: grid;
   grid-template-columns: 33% 33% 33%;
-  grid-template-rows: 33% 33%;
+  grid-template-rows: 50% 50%;
   justify-items: center;
-  row-gap: 100px;
+  row-gap: 50px;
 }
+
+#third .grid .wrapper {
+position: relative;
+width: 250px;
+height: 75%;
+}
+
+
 
 @media screen and (max-width:500px) {
   #third {
     text-align: center;
   }
-  
-}
 
-@media screen and (max-width: 500px) {
   #third .grid {
     display: block;
     padding-bottom: 2rem;
@@ -137,9 +242,11 @@ header ul {
   }
 }
 
+
 #third .grid img {
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  height: 100%;
+  margin-bottom:5px;
 }
 
 @media screen and (max-width: 375px) {
@@ -150,20 +257,77 @@ header ul {
   #third .grid {
     padding-left: 1.5rem;
   }
+
   #third .grid img {
     width: 200px;
     height: 200px;
   }
 }
 
-#third .grid a {
-  color: white;
-  text-align: center;
-  text-decoration: none;
+#third .grid .project-btn {
+  background-color: #f4f4f4;
+  border-radius: 0;
+  width: 100%;
 }
 
+#third .grid .project-btn:hover {
+  transform: scaleY(1.2);
+}
+
+#third .grid a {
+  color: black;
+  text-align: center;
+  background-color: #f4f4f4;
+ 
+  text-decoration: none;
+
+}
+
+#third .grid .overlay {
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background: rgb(27, 27, 47, 0.9);
+  padding-top: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.3s ease;
+  color:#fff;
+  text-align: center;
+  
+}
+
+#third .overlay p {
+  /* color: #a8b2d1; */
+  font-size: 14px;
+  font-family: "inter";
+  line-height: 24px;
+  /* text-align: center; */
+}
+
+#third .overlay p:last-of-type{
+  color: #8892b0;
+  font-family: 'roboto mono';
+  font-size: 12px;
+  padding-top: 30px;
+}
+
+#third .wrapper:hover .overlay{
+opacity: 1;
+transform: scale(1);
+
+}
+ 
 #fourth {
+  padding-top: 100px;
   margin-bottom: 200px;
+}
+
+#fourth h2 {
+  color: #64ffda;
 }
 
 #fourth .contact-form {
@@ -182,7 +346,6 @@ header ul {
   border: none;
   font-size: 16px;
   margin-bottom: 3rem;
-  margin-left: 2rem;
   margin-right: 2rem;
   padding: 11px 20px;
   width: 40%;
@@ -198,36 +361,43 @@ header ul {
 #fourth .contact-form button {
   margin-top: 5px;
   margin-bottom: 15px;
-  margin-left: 65rem;
   width: 100px;
 }
 
 /* tablet responsiveness */
-@media screen and (max-width: 1023px) {
+/* @media screen and (max-width: 1023px) {
   #fourth .contact-form button {
     position: absolute;
     right: 5rem;
     margin-top: -55px;
   }
-}
+} */
 
 /* phone responseviness */
 @media screen and (max-width: 768px) {
+  #section {
+    margin: 0 1rem;
+  }
+
+  #fourth {
+    text-align: center;
+  }
   #fourth .contact-bkg {
     width: 100%;
   }
   #fourth .contact-form input, #message {
     width: 80%;
     margin-left: 0px;
+    margin-right: 0px;
   }
 
   #fourth .contact-form #message{
     width: 80%;
   }
 
-  #fourth .contact-form button {
+  /* #fourth .contact-form button {
     position: absolute;
     right: 3rem;
     margin-top: -5px;
-  }
+  } */
 }
